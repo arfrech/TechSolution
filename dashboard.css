@@ -1,0 +1,23 @@
+#lblFiltro{
+    background-color: #0369D9;
+    color: white;
+    padding: 16px;
+    margin-top: 16px;
+    border-radius: 5px;
+    margin-left: 7%;
+    margin-bottom: -25px;
+}
+
+#filtro{
+    border: 1px solid gray;
+    padding: 30px;
+    border-radius: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#relatorio{
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
