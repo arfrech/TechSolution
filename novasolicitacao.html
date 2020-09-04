@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="novasolicitacao.css">
     <script type="text/javascript" src="novasolicitacao.js"></script>
+    
     <title>.: Nova Solicitação :. </title>
 </head>
 <body onload="recuperaPDV();">
@@ -13,14 +14,15 @@
 
         <div class="row">
             <div class="col-12 text-center">
-                <h3> Novo Agendamento </h3>
+                <h1>Sistema de Gestão de Agendamentos</h1>
+                <h3>Abertura de nova solicitação de agendamento de serviço:</h3>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
                 <div class="form-group">
-                    <label for="txtNomeTecnico">Nome do técnico Responsável</label>
-                    <input type="text" class="form-control" id="txtNomeTecnico">
+                    <label for="txtNomeTecnico">Nome do(a) responsável pela execução do serviço:</label>
+                    <input type="text" class="form-control" id="txtNomeTecnico" placeholder="Digite o seu nome completo" required>
                 </div>
             </div>
         </div>
@@ -28,14 +30,25 @@
         <div class="row">
             <div class="col-6">
                 <div class="form-group">
-                    <label for="txtTelefone">Telefone de Contato</label>
-                    <input type="text" class="form-control" id="txtTelefone">
+                    <label for="txtTelefone">Telefone de Contato:</label>
+                    <input type="text" class="form-control" id="txtTelefone" placeholder="Digite o número do seu celular, com o DDD" required>
                 </div>
             </div>
             <div class="col-6">
                 <div class="form-group">
-                    <label for="txtOperadora">Operadora</label>
-                    <input type="text" class="form-control" id="txtOperadora" placeholder="Ex: Vivo, TIM, Claro, etc">
+                    <label for="txtOperadora">Operadora:</label>
+                    <select type="text" class="form-control" id="txtOperadora" required>
+                        <option selected disabled hidden>Selecione uma operadora</option>
+                        <option>Vivo</option>
+                        <option>Claro</option>
+                        <option>TIM</option>
+                        <option>OI</option>
+                        <option>Nextel</option>
+                        <option>Algar</option>
+                        <option>Sercomtel</option>
+                        <option>MVNO’s - Porto Seguro, Datora e Terapar</option>
+                        <option>Outra</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -43,13 +56,13 @@
         <div class="row">
             <div class="col-6">
                 <div class="form-group">
-                    <label for="txtDocumento">Documento</label>
-                    <input type="text" class="form-control" id="txtDocumento">
+                    <label for="txtDocumento">Documento de Identificação:</label>
+                    <input type="text" class="form-control" id="txtDocumento" placeholder="Digite o número do seu RG" required>
                 </div>
             </div>
             <div class="col-6">
                 <div class="form-group">
-                    <label for="divPDV">PDV</label>
+                    <label for="divPDV">PDV:</label>
                     <div id="divPDV">
                         ****
                     </div>
@@ -60,14 +73,14 @@
         <div class="row">
             <div class="col-6">
                 <div class="form-group">
-                    <label for="txtData">Data do Agendamento</label>
-                    <input type="date" class="form-control" id="txtData">
+                    <label for="txtData">Data do Agendamento:</label>
+                    <input type="date" class="form-control" id="txtData" required>
                 </div>
             </div>
             <div class="col-6">
                 <div class="form-group">
-                    <label for="txtHora">Hora do Agendamento</label>
-                    <input type="time" class="form-control" id="txtHora" placeholder="HH:MM">
+                    <label for="txtHora">Hora do Agendamento:</label>
+                    <input type="time" class="form-control" id="txtHora" placeholder="HH:MM" required>
                 </div>
             </div>
         </div>
@@ -83,5 +96,16 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script ssrc="https://github.com/igorescobar/jQuery-Mask-Plugin/blob/master/dist/jquery.mask.min.js"></script>
+    
+   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+        <script type="text/javascript">
+        $("#telefone, #celular, #txtTelefone").mask("(00) 00000-0000");
+        $("#rg, #txtDocumento").mask('99.999.999-9');
+        </script>
+
+    
 </body>
 </html>

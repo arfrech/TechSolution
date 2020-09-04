@@ -1,0 +1,12 @@
+body {
+    background-image: url("Página Inicial - v3.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color: white;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
