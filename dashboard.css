@@ -1,7 +1,9 @@
 #lblFiltro{
     background-color: #0369D9;
     color: white;
-    padding: 16px;
+    padding: 8px;
+    width: 100px;
+    text-align: center;
     margin-top: 16px;
     border-radius: 5px;
     margin-left: 7%;
@@ -16,10 +18,27 @@
     margin-right: 5%;
 }
 
+#dadosUsuario {
+    color: white;
+}
+
 #relatorio{
     border: 1px solid gray;
     border-radius: 5px;
     margin-bottom: 50px;
+    background-color:white;
+    color: black;
+    text-align: center;
+    border-style: double;
+}
+
+#tabelaRelatorio {
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    background-color:white;
+    color: black;
+    text-align: center;
 }
 
 body {
@@ -33,4 +52,9 @@ h1 {
     color: white;
     margin-top: 80px;
     margin-bottom: 30px;
+}
+
+.camposTabela {
+    
+    color: white;
 }
