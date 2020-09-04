@@ -18,11 +18,12 @@
                 <h3>Abertura de nova solicitação de agendamento de serviço:</h3>
             </div>
         </div>
+
         <div class="row">
             <div class="col-12">
                 <div class="form-group">
                     <label for="txtNomeTecnico">Nome do(a) responsável pela execução do serviço:</label>
-                    <input type="text" class="form-control" id="txtNomeTecnico" placeholder="Digite o seu nome completo" required>
+                    <input type="text" class="form-control" id="txtNomeTecnico" name="txtNomeTecnico" placeholder="Digite o seu nome completo" required>
                 </div>
             </div>
         </div>
@@ -31,23 +32,23 @@
             <div class="col-6">
                 <div class="form-group">
                     <label for="txtTelefone">Telefone de Contato:</label>
-                    <input type="text" class="form-control" id="txtTelefone" placeholder="Digite o número do seu celular, com o DDD" required>
+                    <input type="text" class="form-control" id="txtTelefone" name="txtTelefone" placeholder="Digite o número do seu celular, com o DDD" required>
                 </div>
             </div>
             <div class="col-6">
                 <div class="form-group">
                     <label for="txtOperadora">Operadora:</label>
-                    <select type="text" class="form-control" id="txtOperadora" required>
-                        <option selected disabled hidden>Selecione uma operadora</option>
-                        <option>Vivo</option>
-                        <option>Claro</option>
-                        <option>TIM</option>
-                        <option>OI</option>
-                        <option>Nextel</option>
-                        <option>Algar</option>
-                        <option>Sercomtel</option>
-                        <option>MVNO’s - Porto Seguro, Datora e Terapar</option>
-                        <option>Outra</option>
+                    <select type="text" class="form-control" id="txtOperadora" name="txtOperadora" required>
+                        <option value="" selected disabled hidden>Selecione uma operadora</option>
+                        <option value="Vivo">Vivo</option>
+                        <option value="Claro">Claro</option>
+                        <option value="TIM">TIM</option>
+                        <option value="OI">OI</option>
+                        <option value="Nextel">Nextel</option>
+                        <option value="Algar">Algar</option>
+                        <option value="Sercomtel">Sercomtel</option>
+                        <option value="MVNO">MVNO’s - Porto Seguro, Datora e Terapar</option>
+                        <option value="Outra">Outra</option>
                     </select>
                 </div>
             </div>
@@ -57,7 +58,7 @@
             <div class="col-6">
                 <div class="form-group">
                     <label for="txtDocumento">Documento de Identificação:</label>
-                    <input type="text" class="form-control" id="txtDocumento" placeholder="Digite o número do seu RG" required>
+                    <input type="text" class="form-control" id="txtDocumento" name="txtDocumento" placeholder="Digite o número do seu RG" required>
                 </div>
             </div>
             <div class="col-6">
@@ -74,20 +75,21 @@
             <div class="col-6">
                 <div class="form-group">
                     <label for="txtData">Data do Agendamento:</label>
-                    <input type="date" class="form-control" id="txtData" required>
+                    <input type="date" class="form-control" id="txtData" name="txtData" required>
                 </div>
             </div>
             <div class="col-6">
                 <div class="form-group">
                     <label for="txtHora">Hora do Agendamento:</label>
-                    <input type="time" class="form-control" id="txtHora" placeholder="HH:MM" required>
+                    <input type="time" class="form-control" id="txtHora" name="txtHora" placeholder="HH:MM" required>
                 </div>
             </div>
         </div>
 
         <div class="row">
             <div class="col-12">
-                <button class="btn btn-primary" onclick="enviarDados()">Enviar Dados</button>
+                <button class="btn btn-primary" onclick="enviarDados()">Enviar nova solicitação</button>
+                <a href="index.html" target="_blank" class="btn btn-primary">Voltar para o menu de opções</a>
             </div>
         </div>
         

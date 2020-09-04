@@ -22,6 +22,42 @@ function enviarDados(){
     var txtHora        = document.getElementById("txtHora").value;
     var txtPDV         = document.getElementById("txtPDV").value;
 
+    if(txtNomeTecnico==""){
+        alert("Por favor, preencha o campo Nome");
+        document.getElementById("txtNomeTecnico").focus();
+        return false;
+    }
+
+    if(txtOperadora==""){
+        alert("Por favor, preencha o campo Operadora com uma empresa válida");
+        document.getElementById("txtOperadora").focus();
+        return false;
+    }
+
+    if(txtTelefone==""){
+        alert("Por favor, preencha o campo Telefone com um número válido");
+        document.getElementById("txtTelefone").focus();
+        return false;
+    }
+
+    if(txtDocumento==""){
+        alert("Por favor, preencha o campo Documento com um RG válido");
+        document.getElementById("txtDocumento").focus();
+        return false;
+    }
+
+    if(txtData==""){
+        alert("Por favor, preencha o campo Data com uma data válida");
+        document.getElementById("txtData").focus();
+        return false;
+    }
+
+    if(txtHora==""){
+        alert("Por favor, preencha o campo Hora com um horário válido");
+        document.getElementById("txtHora").focus();
+        return false;
+    }
+
     var msgBody = {
         nomeTecnico     : txtNomeTecnico,
         operadora       : txtOperadora,
@@ -45,12 +81,11 @@ function enviarDados(){
 
     fetch("http://localhost:8088/solicitacao/nova", cabecalho)
     .then(res => trataResultado(res));
-
 }
 
 function trataResultado(res){
     if (res.status == 201){
-        alert("Solicitacao criada com sucesso!");
+        alert("Solicitacao criada com sucesso! Por favor, aguarde a liberação do acesso pelo gestor ;-)");
         location.reload();
     }
     else{
